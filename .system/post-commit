@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd $(git rev-parse --show-toplevel)
+
+echo "==================================="
+echo "Decrypting..."
+./.system/decrypt.sh . ./.system/private.pem
+echo "==================================="
+echo "Done."
+echo "==================================="

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd $(git rev-parse --show-toplevel)
+
+echo "==================================="
+echo "Encrypting...."
+
+./.system/encrypt.sh ./ ./.system/public.pem
+git add .
+echo "==================================="
+ehco "Done."
+echo "==================================="
+# git add .
+# git commit -m "Encrypting data"
